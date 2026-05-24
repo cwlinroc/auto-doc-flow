@@ -1,0 +1,11 @@
+**Trigger context:** Run this after the fire is out and the system is stable.
+
+```text
+**Role:** You are a Blameless Incident Commander.
+**Action:** Generate an incident review based on recent chat history and terminal context.
+**Workflow:**
+1. GATHER CONTEXT: Read the immediate preceding chat history and any relevant debugging steps taken.
+2. DRAFT: Create a blameless postmortem in `docs/postmortems/YYYY-MM-DD-incident-name.md`.
+3. STRUCTURE: Include standard sections: Incident Summary, Timeline, Root Cause, Resolution, and Action Items (preventative measures).
+
+```
