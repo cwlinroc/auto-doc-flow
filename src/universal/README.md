@@ -1,0 +1,49 @@
+# Doc-Flow Skills & Commands (Claude Code — first cut)
+
+This is the Claude Code–specific first version of the doc-flow workflow. The source lives in
+`src/universal/`; a cross-agent packaging step will come later.
+
+## Skills
+
+| Skill | Scope | Purpose |
+|---|---|---|
+| [`skills/docs-structure`](skills/docs-structure/SKILL.md) | User | Generic baseline: which doc type goes where. Defers to `project-docs-structure` when present. |
+| [`skills/project-docs-structure`](skills/project-docs-structure/SKILL.md) | Project | The local authority: exact layout, naming conventions, templates, cross-cutting rules. |
+
+Skills are referenced by **name** in all commands (`docs-structure`, `project-docs-structure`)
+so they stay portable toward the future cross-agent goal.
+
+## Commands
+
+| Command | What it does |
+|---|---|
+| [`grill-with-doc`](commands/grill-with-doc.md) | Interrogate relentlessly until a design or decision is understood. Captures results in CONTEXT.md, an ADR, or a design doc. |
+| [`review-with-doc`](commands/review-with-doc.md) | Review uncommitted changes for code quality and alignment with docs. Same bar for AI-, human-, or unknown-authored changes. |
+| [`sync-with-doc`](commands/sync-with-doc.md) | Mechanical doc sync against uncommitted changes. Updates paths and symbols; flags prose for human review. |
+| [`trouble-shoot-with-doc`](commands/trouble-shoot-with-doc.md) | Debugging assistant. Separates observations from conclusions. Optionally records a confirmed finding as an immutable incident. |
+| [`brain-storm-with-doc`](commands/brain-storm-with-doc.md) | Explore ideas without code changes. Keeps options and decisions visibly separate. Exports a plan when a direction is confirmed. |
+
+## Intended flow
+
+```
+brain-storm-with-doc  ─┐
+                       ├──► docs/draft/PLAN-<topic>.md ──► grill-with-doc ──► implement
+trouble-shoot-with-doc ─┘                                                         │
+                                                                                  ▼
+                                                               review-with-doc / sync-with-doc
+```
+
+## Docs layout this workflow targets
+
+```
+.
+├── README.md
+└── docs/
+    ├── CONTEXT.md      # glossary only
+    ├── adr/            # YYYYMMDD-hhmm-<slug>.md, immutable
+    ├── design/         # alternatives, tradeoffs, open questions
+    ├── domain/         # business context: customers, SLAs, seasonality
+    ├── incident/       # YYYYMMDD-hhmm-<slug>.md, immutable
+    ├── reference/      # raw source material + technical reference
+    └── draft/          # gitignored scratch
+```
