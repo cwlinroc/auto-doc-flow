@@ -22,3 +22,4 @@ draft/
 ```
 
 The `draft/` folder is personal scratch. If two engineers need to collaborate on something, the draft graduates to `docs/` (even as a rough file).
+
