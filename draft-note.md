@@ -47,10 +47,7 @@ check if exist.
     - see problem, ask 
     - provide a fix, ask
 
-    - option 1: fix done, ask permission and update docs
-    - option 2: fix done, ask the user to run sync-with-docs
-
-    - ? : multi agent spin up ?
+    - fix done, ask permission to update docs
 
 3. sync-with-doc
     - no code change, just sync/update docs
@@ -77,7 +74,6 @@ check if exist.
     ├── adr/            # Architecture Decision Records
     ├── design/         # Design write-ups (alternatives, tradeoffs, open questions)
     ├── domain/         # Business context: customers, SLAs, domain, seasonality
-    ├── runbooks(?)/       # Operational procedures
     ├── incident/       # Blameless incident reviews (lightweight add-on; serious tracking lives elsewhere)
     ├── reference/      # Technical reference: APIs, schemas, third-party docs
     └── draft/          # gitignored. Personal scratch for brainstorming.
@@ -102,9 +98,8 @@ check if exist.
 1. create a basic english version first
 2. a modified traditional chinese version
 
-### questions
+### other
 
-1. conflict adr number
-    - use YYYYMMDD-hhmm-xxxxxxxx.md
-
+1. adr md file name
+    - YYYYMMDD-hhmm-xxxxxxxx.md
 
