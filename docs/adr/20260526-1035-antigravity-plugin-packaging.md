@@ -49,3 +49,7 @@ Introduce dedicated packaging and a build pipeline for Antigravity under `src/an
 
 - **Shared `build.sh` at root**: A single builder script for all agents. Rejected: keeps agent concerns separate; a script under `src/antigravity/` matches `src/claude-code/build.sh`'s pattern and encapsulates agent-specific packaging cleanly.
 - **Copying raw markdown directly**: Skipping the settings JSON maps for Antigravity. Rejected: lacks metadata integration and versioning; does not support YAML frontmatter compilation, which the agent uses to automatically categorize and activate skills.
+
+---
+
+**Correction note — 2026-05-26:** The install script named in Decision item 3 (`install-antigravity-plugin.ps1`, PowerShell, at the repository root) was replaced with a cross-platform bash script at `scripts/install-antigravity-plugin.sh`. All other installer scripts were also moved under `scripts/` (`scripts/install-claude-plugin.sh`, `scripts/uninstall-antigravity-plugin.sh`, `scripts/uninstall-claude-plugin.sh`). The architectural decision — a single script that builds then copies `dist/` to the Antigravity config directory — is unchanged.

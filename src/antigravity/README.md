@@ -26,10 +26,10 @@ bash src/antigravity/build.sh
 
 The script compiles each settings JSON under `commands/` and `skills/` with their matching bodies from `src/universal/` and outputs them as skills inside `dist/skills/`.
 
-## Installing (Windows)
+## Installing
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\install-antigravity-plugin.ps1
+```bash
+bash scripts/install-antigravity-plugin.sh
 ```
 
 This compiles the plugin and copies the `dist/` files directly into your local Antigravity config directory at:

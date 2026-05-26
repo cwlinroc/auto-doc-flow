@@ -16,8 +16,8 @@ version is stable.
 - [`src/claude-code/`](src/claude-code/README.md) — Claude Code settings JSON + `build.sh`;
   run `bash src/claude-code/build.sh` to regenerate the plugin
 - [`src/antigravity/`](src/antigravity/README.md) — Antigravity settings JSON + `build.sh` +
-  PowerShell installer; run `bash src/antigravity/build.sh` to build, or
-  `install-antigravity-plugin.ps1` to build and install
+  installer; run `bash src/antigravity/build.sh` to build, or
+  `bash scripts/install-antigravity-plugin.sh` to build and install
 - [Claude prototype](docs/reference/claude-prototype/README.md) — historical prototype;
   useful for command style and structure patterns
 - [Gemini prototype](docs/reference/gemini-prototype/) — plain-text equivalents for
@@ -71,7 +71,7 @@ After editing either the universal body or the settings JSON, run:
 
 After editing either the universal body or the settings JSON, run:
 `bash src/antigravity/build.sh` to regenerate `src/antigravity/dist/`, or
-`install-antigravity-plugin.ps1` to build and install in one step.
+`bash scripts/install-antigravity-plugin.sh` to build and install in one step.
 
 **Eventual export target (after cross-agent packaging):**
 
