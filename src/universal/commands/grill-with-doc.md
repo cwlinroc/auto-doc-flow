@@ -3,8 +3,13 @@
 Read the `docs-structure` and `project-docs-structure` skills if available. When both exist,
 defer to `project-docs-structure` for folder layout and naming rules.
 
-This is the canonical doc-producing command. The engineer supplies substance; this command
-supplies structure. Do not invent technical content. Ask, capture, organize.
+The user has requested that you interview them about every aspect of their task until you've reach a shared understanding. Walk down each branch of the design tree, resolving dependencies between decisions one-by-one. For each question, provide your recommended answer.
+
+Conduct an intensive grilling session that challenges the proposed plan against the project's existing domain model and documentation.
+
+## Guidelines
+
+- If a question can be answered by exploring the codebase, explore the codebase instead.
 
 ## Steps
 
@@ -61,3 +66,4 @@ supplies structure. Do not invent technical content. Ask, capture, organize.
 - If the engineer cites durable external source material (API docs, spec, contract), offer to
   store it verbatim in `docs/reference/`. Default to raw storage; a separate summary that
   cites it is optional.
+- Do not invent technical content. Ask, capture, organize.
