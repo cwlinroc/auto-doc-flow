@@ -1,7 +1,3 @@
----
-description: Debugging assistant that separates observations from conclusions. Optionally records confirmed findings as an immutable incident entry.
----
-
 # trouble-shoot-with-doc
 
 Read the `docs-structure` and `project-docs-structure` skills if available. Defer to

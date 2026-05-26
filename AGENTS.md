@@ -11,10 +11,10 @@ version is stable.
 
 ## Key reference
 
-- [`src/universal/`](src/universal/README.md) — **primary source**: the working commands and
-  skills, targeting Claude Code first
-- [`draft-note.md`](draft-note.md) — latest design thinking; takes precedence over older
-  references when they conflict
+- [`src/universal/`](src/universal/README.md) — **body source**: agent-agnostic command and
+  skill prose (no frontmatter)
+- [`src/claude-code/`](src/claude-code/README.md) — Claude Code settings JSON + `build.sh`;
+  run `bash src/claude-code/build.sh` to regenerate the plugin
 - [Claude prototype](docs/reference/claude-prototype/README.md) — historical prototype;
   useful for command style and structure patterns
 - [Gemini prototype](docs/reference/gemini-prototype/) — plain-text equivalents for
@@ -40,14 +40,25 @@ Draft file naming: `Thoughts-<topic>.md`, `Problem-<topic>.md`, `PLAN-<topic>.md
 
 ## Where to put new customization files
 
-**Current source (iterate here first):**
+**Universal body (agent-agnostic prose, no frontmatter):**
 
 | Type     | Location                                       |
 | -------- | ---------------------------------------------- |
 | Skills   | `src/universal/skills/<name>/SKILL.md`         |
 | Commands | `src/universal/commands/<name>.md`             |
 
-**Eventual export target (after packaging):**
+**Claude Code settings (metadata + plugin packaging):**
+
+| Type              | Location                                       |
+| ----------------- | ---------------------------------------------- |
+| Command settings  | `src/claude-code/commands/<name>.json`         |
+| Skill settings    | `src/claude-code/skills/<name>.json`           |
+| Plugin metadata   | `src/claude-code/plugin/{plugin,marketplace}.json` |
+
+After editing either the universal body or the settings JSON, run:
+`bash src/claude-code/build.sh` to regenerate `src/claude-code/dist/`.
+
+**Eventual export target (after cross-agent packaging):**
 
 | Type         | Location                                      |
 | ------------ | --------------------------------------------- |

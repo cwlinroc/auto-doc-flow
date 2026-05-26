@@ -1,7 +1,3 @@
----
-description: Mechanically sync docs to match uncommitted code changes. Updates moved paths, renamed symbols, and broken links. Flags prose for human review — never rewrites it.
----
-
 # sync-with-doc
 
 Read the `docs-structure` and `project-docs-structure` skills if available. Defer to

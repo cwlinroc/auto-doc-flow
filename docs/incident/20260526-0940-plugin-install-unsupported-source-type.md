@@ -68,3 +68,14 @@ to the generic "unsupported source type" error. Fix: `"source": "./"`.
 
 - Fix applied in: `src/universal/.claude-plugin/marketplace.json` (source `"."` → `"./"`)
 - Fast-iteration script added: `test-plugin.sh` (uses `--plugin-dir`)
+
+## Follow-up — 20260526
+
+The "What we learned" example `claude --plugin-dir src/universal` is no longer valid.
+`src/universal/` had its `.claude-plugin/` removed when the plugin was split into a build
+pipeline (see ADR `20260526-1007-split-universal-vs-claude-code-build.md`). The updated
+fast-iteration command is:
+
+```
+bash src/claude-code/build.sh && claude --plugin-dir src/claude-code/dist
+```

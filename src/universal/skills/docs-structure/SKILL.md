@@ -1,8 +1,3 @@
----
-name: docs-structure
-description: Use this skill when a command needs lightweight guidance on how to organize documentation. Generic baseline — defers to project-docs-structure when a repo defines its own layout.
----
-
 # Docs Structure
 
 This is a user-scope skill. It gives doc-producing commands a minimal, sensible default for

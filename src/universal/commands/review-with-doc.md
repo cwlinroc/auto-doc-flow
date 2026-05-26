@@ -1,7 +1,3 @@
----
-description: Review uncommitted code changes for quality and doc alignment. Applies the same bar to AI-written, human-written, or unknown-authored changes.
----
-
 # review-with-doc
 
 Read the `docs-structure` and `project-docs-structure` skills if available. Defer to

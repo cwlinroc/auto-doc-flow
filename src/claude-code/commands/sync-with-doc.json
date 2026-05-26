@@ -1,0 +1,3 @@
+{
+  "description": "Mechanically sync docs to match uncommitted code changes. Updates moved paths, renamed symbols, and broken links. Flags prose for human review — never rewrites it."
+}

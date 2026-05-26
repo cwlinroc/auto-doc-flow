@@ -1,8 +1,3 @@
----
-name: project-docs-structure
-description: Use this skill when doc-producing commands need the project-specific docs layout for this repository. More authoritative than docs-structure — follow this when the two differ.
----
-
 # Project Docs Structure
 
 This skill is the local authority on how docs are organized in this repository. Use it

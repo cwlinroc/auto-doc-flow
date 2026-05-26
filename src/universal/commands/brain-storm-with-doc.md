@@ -1,7 +1,3 @@
----
-description: Explore ideas without making code changes. Keeps options and decisions visibly separate. Exports a confirmed direction to a PLAN draft for grill-with-doc.
----
-
 # brain-storm-with-doc
 
 Read the `docs-structure` and `project-docs-structure` skills if available. Defer to

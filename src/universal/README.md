@@ -1,7 +1,9 @@
-# Doc-Flow Skills & Commands (Claude Code — first cut)
+# Doc-Flow Skills & Commands — universal source
 
-This is the Claude Code–specific first version of the doc-flow workflow. The source lives in
-`src/universal/`; a cross-agent packaging step will come later.
+This directory holds the **agent-agnostic body** of every command and skill. There is no
+frontmatter here — metadata and packaging live in `src/claude-code/` (or the equivalent
+agent-specific directory). See [`src/claude-code/build.sh`](../claude-code/build.sh) for how
+the Claude Code plugin is assembled from this source.
 
 ## Skills
 

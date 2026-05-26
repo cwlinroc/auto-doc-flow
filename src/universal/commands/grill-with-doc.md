@@ -1,7 +1,3 @@
----
-description: Interrogate the engineer relentlessly until a design or decision is understood, then capture it in CONTEXT.md, an ADR, or a design doc. Human supplies substance; agent supplies structure.
----
-
 # grill-with-doc
 
 Read the `docs-structure` and `project-docs-structure` skills if available. When both exist,
