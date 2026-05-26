@@ -1,0 +1,4 @@
+{
+  "name": "docs-structure",
+  "description": "Provides lightweight, generic baseline guidance on how to organize documentation. ACTIVATE this skill when organizing doc folders, choosing document types (ADR vs design doc), or creating default doc structures."
+}

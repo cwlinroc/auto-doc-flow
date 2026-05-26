@@ -1,16 +1,41 @@
-# Auto docs flow
+# Auto Doc Flow
 
-This is a project meant to build skills and custom commands, that can generate documentation that fits the agent tool workflow.
+This project builds reusable agent skills and custom commands for structured documentation
+workflows.
 
 ## Current state
 
-5 commands and 2 skills, working as a Claude Code plugin. Source is split into a two-layer
-build pipeline: universal body prose in `src/universal/`, Claude Code packaging in
-`src/claude-code/`. Run `bash src/claude-code/build.sh` to regenerate the plugin.
+The repository currently ships 5 commands and 2 skills from one shared source of truth in
+`src/universal/`, then packages that content for four targets:
+
+- Claude Code
+- Google Antigravity
+- OpenAI Codex CLI
+- GitHub Copilot
+
+Each agent keeps its own packaging metadata and `build.sh` under `src/<agent>/`, while the
+portable command and skill prose stays in `src/universal/`.
+
+## Repository layout
 
 | What | Where |
 |---|---|
-| Command & skill bodies (agent-agnostic) | [`src/universal/`](src/universal/README.md) |
-| Claude Code settings, build script & plugin | [`src/claude-code/`](src/claude-code/README.md) |
+| Command and skill bodies (agent-agnostic) | [`src/universal/`](src/universal/README.md) |
+| Claude Code settings, build script, and plugin metadata | [`src/claude-code/`](src/claude-code/README.md) |
+| Antigravity settings, build script, and plugin metadata | [`src/antigravity/`](src/antigravity/README.md) |
+| Codex CLI settings, build script, and plugin metadata | [`src/codex/`](src/codex/README.md) |
+| GitHub Copilot settings, build script, and plugin metadata | [`src/copilot/`](src/copilot/README.md) |
 | Format examples (CONTEXT, ADR, incident) | [`src/universal/skills/project-docs-structure/`](src/universal/skills/project-docs-structure/SKILL.md) |
-| Historical prototypes & references | [`docs/reference/`](docs/reference/) |
+| Historical prototypes and references | [`docs/reference/`](docs/reference/) |
+
+## Build and install
+
+| Target | Build | Install |
+|---|---|---|
+| Claude Code | `bash src/claude-code/build.sh` | Load from `src/claude-code/dist` |
+| Antigravity | `bash src/antigravity/build.sh` | `bash scripts/install-antigravity-plugin.sh` |
+| Codex CLI | `bash src/codex/build.sh` | `bash scripts/install-codex-plugin.sh` |
+| GitHub Copilot | `bash src/copilot/build.sh` | `bash scripts/install-copilot-plugin.sh` |
+
+Generated output always goes to the target-specific `src/<agent>/dist/` directory and is not
+checked into git.

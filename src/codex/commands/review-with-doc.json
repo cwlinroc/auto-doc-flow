@@ -1,0 +1,4 @@
+{
+  "name": "review-with-doc",
+  "description": "Review a proposed code change or diff against existing design documentation, ADRs, and guidelines. Trigger this skill when reviewing code changes, pull requests, or verifying if changes align with documentation."
+}

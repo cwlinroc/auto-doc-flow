@@ -1,0 +1,9 @@
+{
+  "name": "adf-copilot-plugin",
+  "version": "1.0.0",
+  "description": "Structured documentation workflow skills and prompts for Copilot: brainstorm, grill decisions, review code, sync docs, and troubleshoot with doc capture.",
+  "author": {
+    "name": "chenweilin"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "sync-with-doc",
+  "description": "Mechanically audit and synchronize references, links, files, and terms between code and documentation. Trigger this skill when checking for dead links, verifying glossary terms, or validating doc sync status."
+}
