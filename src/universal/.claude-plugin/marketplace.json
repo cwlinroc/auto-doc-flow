@@ -1,0 +1,13 @@
+{
+  "name": "auto-doc-flow",
+  "owner": {
+    "name": "chenweilin"
+  },
+  "plugins": [
+    {
+      "name": "adf",
+      "source": "./",
+      "description": "Skills and commands for structured documentation workflows"
+    }
+  ]
+}

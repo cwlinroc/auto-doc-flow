@@ -1,0 +1,8 @@
+{
+  "name": "adf",
+  "description": "Skills and commands for structured documentation workflows: brainstorm, grill decisions, review code, sync docs, and troubleshoot with doc capture.",
+  "version": "1.0.0",
+  "author": {
+    "name": "chenweilin"
+  }
+}
