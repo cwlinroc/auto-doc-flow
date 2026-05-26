@@ -1,0 +1,4 @@
+{
+  "name": "adf:grill-with-doc",
+  "description": "Relentlessly interview the engineer about a design decision, challenging terminology and constraints, and capture the outcome in CONTEXT.md, an ADR, or a design doc. ACTIVATE this skill when the user wants to grill/interrogate a design decision or document a new architectural decision."
+}

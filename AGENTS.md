@@ -15,6 +15,9 @@ version is stable.
   skill prose (no frontmatter)
 - [`src/claude-code/`](src/claude-code/README.md) — Claude Code settings JSON + `build.sh`;
   run `bash src/claude-code/build.sh` to regenerate the plugin
+- [`src/antigravity/`](src/antigravity/README.md) — Antigravity settings JSON + `build.sh` +
+  PowerShell installer; run `bash src/antigravity/build.sh` to build, or
+  `install-antigravity-plugin.ps1` to build and install
 - [Claude prototype](docs/reference/claude-prototype/README.md) — historical prototype;
   useful for command style and structure patterns
 - [Gemini prototype](docs/reference/gemini-prototype/) — plain-text equivalents for
@@ -57,6 +60,18 @@ Draft file naming: `Thoughts-<topic>.md`, `Problem-<topic>.md`, `PLAN-<topic>.md
 
 After editing either the universal body or the settings JSON, run:
 `bash src/claude-code/build.sh` to regenerate `src/claude-code/dist/`.
+
+**Antigravity settings (metadata + plugin packaging):**
+
+| Type              | Location                                       |
+| ----------------- | ---------------------------------------------- |
+| Command settings  | `src/antigravity/commands/<name>.json`         |
+| Skill settings    | `src/antigravity/skills/<name>.json`           |
+| Plugin metadata   | `src/antigravity/plugin.json`                  |
+
+After editing either the universal body or the settings JSON, run:
+`bash src/antigravity/build.sh` to regenerate `src/antigravity/dist/`, or
+`install-antigravity-plugin.ps1` to build and install in one step.
 
 **Eventual export target (after cross-agent packaging):**
 
