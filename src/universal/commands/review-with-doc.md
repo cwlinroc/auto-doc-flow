@@ -2,8 +2,8 @@
 
 **Purpose:** Review code changes to ensure documentation alignment, proactively hunt for code issues (bugs, unhandled edge cases, unclear terminology), point out problems with clear definitions, and propose concrete fixes.
 
-Read the `docs-structure` and `project-docs-structure` skills if available. Defer to
-`project-docs-structure` when present.
+Read the `docs-structure` skill to understand general conventions and check for the local 
+`docs/project-docs-structure.md` file, which is the absolute authority on repository rules.
 
 Review is grounded in the actual diff — no guessing at intent. The same standard applies
 whether the change was written by AI, a human, or an unknown author.

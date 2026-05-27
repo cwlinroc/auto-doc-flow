@@ -18,6 +18,12 @@ bash "$PROJECT_ROOT/src/codex/build.sh"
 echo -e "\n\033[0;36mInstalling to $TARGET_DIR ...\033[0m"
 mkdir -p "$TARGET_DIR"
 
+# Clean up deprecated global skill
+if [ -d "$TARGET_DIR/project-docs-structure" ]; then
+  rm -rf "$TARGET_DIR/project-docs-structure"
+  echo "  Cleaned up deprecated global skill: project-docs-structure"
+fi
+
 # Copy each skill directory from dist/skills to ~/.codex/skills
 if [ -d "$DIST_DIR/skills" ]; then
   for skill_dir in "$DIST_DIR/skills"/*; do

@@ -1,7 +1,7 @@
 # grill-with-doc
 
-Read the `docs-structure` and `project-docs-structure` skills if available. When both exist,
-defer to `project-docs-structure` for folder layout and naming rules.
+Read the `docs-structure` skill to understand general conventions and check for the local 
+`docs/project-docs-structure.md` file, which is the absolute authority on repository rules.
 
 The user has requested that you interview them about every aspect of their task until you've reach a shared understanding. Walk down each branch of the design tree, resolving dependencies between decisions one-by-one. For each question, provide your recommended answer.
 
@@ -44,7 +44,7 @@ Conduct an intensive grilling session that challenges the proposed plan against 
 
 6. **Get the current timestamp.** Run the date-getting shell command yourself first (e.g., `Get-Date -Format "yyyyMMdd-HHmm"` in PowerShell or `date +%Y%m%d-%H%M` in bash). Only ask the user if command execution is unavailable or fails.
 
-7. **Write the doc.** Use the template from `project-docs-structure`. ADR filename:
+7. **Write the doc.** Use the templates embedded in `docs/project-docs-structure.md`. ADR filename:
    `YYYYMMDD-hhmm-<slug>.md` in `docs/adr/`. Design doc: `kebab-case.md` in `docs/design/`.
    CONTEXT.md: extend the `## Language` section. Create folders lazily — only when the first
    file in that folder is needed.

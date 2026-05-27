@@ -44,6 +44,12 @@ fi
 echo -e "\n\033[0;36mInstalling skills to $SKILLS_DEST ...\033[0m"
 mkdir -p "$SKILLS_DEST"
 
+# Clean up deprecated global skill
+if [ -d "$SKILLS_DEST/project-docs-structure" ]; then
+  rm -rf "$SKILLS_DEST/project-docs-structure"
+  echo "  Cleaned up deprecated global skill: project-docs-structure"
+fi
+
 if [ -d "$DIST_DIR/skills" ]; then
   for skill_dir in "$DIST_DIR/skills"/*; do
     [ -d "$skill_dir" ] || continue

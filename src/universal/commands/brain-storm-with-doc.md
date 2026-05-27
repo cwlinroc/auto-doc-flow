@@ -1,7 +1,7 @@
 # brain-storm-with-doc
 
-Read the `docs-structure` and `project-docs-structure` skills if available. Defer to
-`project-docs-structure` when present.
+Read the `docs-structure` skill to understand general conventions and check for the local 
+`docs/project-docs-structure.md` file, which is the absolute authority on repository rules.
 
 This command **makes no code changes**. It explores ideas, keeps options and tradeoffs
 visible, and produces a draft the engineer can hand to `grill-with-doc` when ready to

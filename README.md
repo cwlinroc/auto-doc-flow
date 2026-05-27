@@ -5,7 +5,7 @@ workflows.
 
 ## Current state
 
-The repository currently ships 5 commands and 2 skills from one shared source of truth in
+The repository currently ships 5 commands and 1 skill from one shared source of truth in
 `src/universal/`, then packages that content for four targets:
 
 - Claude Code
@@ -25,7 +25,7 @@ portable command and skill prose stays in `src/universal/`.
 | Antigravity settings, build script, and plugin metadata | [`src/antigravity/`](src/antigravity/README.md) |
 | Codex CLI settings, build script, and plugin metadata | [`src/codex/`](src/codex/README.md) |
 | GitHub Copilot settings, build script, and plugin metadata | [`src/copilot/`](src/copilot/README.md) |
-| Format examples (CONTEXT, ADR, incident) | [`src/universal/skills/project-docs-structure/`](src/universal/skills/project-docs-structure/SKILL.md) |
+| Format templates (CONTEXT, ADR, incident) | [`docs/project-docs-structure.md`](docs/project-docs-structure.md) |
 | Historical prototypes and references | [`docs/reference/`](docs/reference/) |
 
 ## Build and install

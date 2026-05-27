@@ -53,3 +53,5 @@ Introduce dedicated packaging and a build pipeline for Antigravity under `src/an
 ---
 
 **Correction note — 2026-05-26:** The install script named in Decision item 3 (`install-antigravity-plugin.ps1`, PowerShell, at the repository root) was replaced with a cross-platform bash script at `scripts/install-antigravity-plugin.sh`. All other installer scripts were also moved under `scripts/` (`scripts/install-claude-plugin.sh`, `scripts/uninstall-antigravity-plugin.sh`, `scripts/uninstall-claude-plugin.sh`). The architectural decision — a single script that builds then copies `dist/` to the Antigravity config directory — is unchanged.
+
+**Correction note — 2026-05-27:** The global `project-docs-structure` skill was deprecated and removed from Antigravity plugin packaging in favor of a local repository file `docs/project-docs-structure.md`. The global `docs-structure` skill now acts as a router that detects and reads this local file, maintaining full repository isolation. See [20260527-1559-transition-project-docs-structure-to-repository-file.md](./20260527-1559-transition-project-docs-structure-to-repository-file.md).

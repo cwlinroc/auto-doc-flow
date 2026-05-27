@@ -1,4 +1,0 @@
-{
-  "name": "project-docs-structure",
-  "description": "Provides project-specific local rules and conventions for documentation layout, naming, and immutability. More authoritative than docs-structure. ACTIVATE this skill when creating or updating any documentation in this repository."
-}

@@ -1,7 +1,7 @@
 # trouble-shoot-with-doc
 
-Read the `docs-structure` and `project-docs-structure` skills if available. Defer to
-`project-docs-structure` when present.
+Read the `docs-structure` skill to understand general conventions and check for the local 
+`docs/project-docs-structure.md` file, which is the absolute authority on repository rules.
 
 This command has two phases. Phase 1 is debugging. Phase 2 — **only when the engineer asks**
 — is recording the confirmed conclusion as an immutable incident entry.
@@ -43,7 +43,7 @@ If yes:
 
 3. **Link to prior incidents (if same root cause).** If the issue has the same root cause as a prior incident, reference that original root-cause incident in the `Related` section of the new file (e.g. `[Original Incident](../incident/YYYYMMDD-hhmm-slug.md)`). This keeps individual occurrences traceable while pointing to the central explanation.
 
-4. **Write the incident file.** Write `docs/incident/YYYYMMDD-hhmm-<slug>.md` using the template in `INCIDENT-FORMAT.md` (from the `project-docs-structure` skill). Tag the occurrence level: **while-dev**, **while-test**, or **while-production**.
+4. **Write the incident file.** Write `docs/incident/YYYYMMDD-hhmm-<slug>.md` using the Incident Format template embedded in `docs/project-docs-structure.md`. Tag the occurrence level: **while-dev**, **while-test**, or **while-production**.
 
 5. **Keep it immutable.** Do not edit original entries after writing. Later corrections or follow-ups are always appended as a dated **Follow-up** section at the bottom of the file.
 

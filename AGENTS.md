@@ -32,7 +32,7 @@ under `src/` (Claude Code, Antigravity, OpenAI Codex CLI, and GitHub Copilot).
 ## Docs conventions
 
 Follow the layout defined in
-[`src/universal/skills/project-docs-structure/SKILL.md`](src/universal/skills/project-docs-structure/SKILL.md):
+[`docs/project-docs-structure.md`](docs/project-docs-structure.md):
 
 | Path              | Purpose                                                                         |
 | ----------------- | ------------------------------------------------------------------------------- |

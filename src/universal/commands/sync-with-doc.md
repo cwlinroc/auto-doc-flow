@@ -1,7 +1,7 @@
 # sync-with-doc
 
-Read the `docs-structure` and `project-docs-structure` skills if available. Defer to
-`project-docs-structure` when present.
+Read the `docs-structure` skill to understand general conventions and check for the local 
+`docs/project-docs-structure.md` file, which is the absolute authority on repository rules.
 
 This command makes **no code changes**. It corrects doc references that are factually wrong
 because of code changes, and flags prose that may now be misleading. It does not rewrite

@@ -1,4 +1,4 @@
 {
   "name": "docs-structure",
-  "description": "Use this skill when a command needs lightweight guidance on how to organize documentation. Generic baseline — defers to project-docs-structure when a repo defines its own layout."
+  "description": "Use this skill when a command needs lightweight guidance on how to organize documentation. Generic baseline — routes to docs/project-docs-structure.md when present in the repo."
 }

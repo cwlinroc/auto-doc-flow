@@ -99,3 +99,7 @@ existing pattern and was explicitly evaluated in ADR 20260526-1035 (alternative:
   checked-in and repo-specific, not portable.
 - **Shared build script** — one builder for all agents. Rejected per ADR 20260526-1035:
   keeps agent concerns encapsulated; each build script is small (~70 lines).
+
+---
+
+**Correction note — 2026-05-27:** The global `project-docs-structure` skill was deprecated and removed from both Codex CLI and GitHub Copilot packaging. Instead, the agents will dynamically discover project-level rules in `docs/project-docs-structure.md` using the updated, global `docs-structure` skill as a router. See [20260527-1559-transition-project-docs-structure-to-repository-file.md](./20260527-1559-transition-project-docs-structure-to-repository-file.md).

@@ -9,10 +9,9 @@ the Claude Code plugin is assembled from this source.
 
 | Skill | Scope | Purpose |
 |---|---|---|
-| [`skills/docs-structure`](skills/docs-structure/SKILL.md) | User | Generic baseline: which doc type goes where. Defers to `project-docs-structure` when present. |
-| [`skills/project-docs-structure`](skills/project-docs-structure/SKILL.md) | Project | The local authority: exact layout, naming conventions, templates, cross-cutting rules. |
+| [`skills/docs-structure`](skills/docs-structure/SKILL.md) | User | Generic baseline: which doc type goes where. Routes to `docs/project-docs-structure.md` when present in the repo. |
 
-Skills are referenced by **name** in all commands (`docs-structure`, `project-docs-structure`)
+Skills are referenced by **name** in all commands (`docs-structure`)
 so they stay portable toward the future cross-agent goal.
 
 ## Commands
