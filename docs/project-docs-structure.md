@@ -1,3 +1,6 @@
+---
+locale: en
+---
 # Project Docs Structure
 
 This file is the local authority on how docs are organized in this repository. Use it together with `docs-structure`; when the two conflict, follow this file.
@@ -50,6 +53,7 @@ This file is the local authority on how docs are organized in this repository. U
 5. **Conflict with existing docs.** If new content contradicts an existing ADR, surface the conflict before writing. If confirmed outdated, append a dated correction note — do not rewrite the original.
 6. **Default to `docs/draft/`.** When unsure whether a doc should exist, write to `docs/draft/` first and ask before graduating to `docs/`.
 7. **Human intent before automation.** Ask when the target doc type is unclear.
+8. **Author generated document content in the configured locale.** The embedded format templates are already localized; match their language when filling in surrounding prose.
 
 ---
 

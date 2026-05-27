@@ -102,8 +102,10 @@ After editing either the universal body or the settings JSON, run:
 `bash src/copilot/build.sh` to regenerate `src/copilot/dist/`, or
 `bash scripts/install-copilot-plugin.sh` to build and install.
 
+## Packaging and installation rules
+
+- If there is no need to check the generated outputs under `dist/` directly, do not run the build/installation commands yourself. Instead, ask the user to run the update script at the end of the task.
+
 ## Git operations
 
 - **Do not perform `git add` or `git commit` operations unless explicitly requested by the user.** The user will review all working-tree changes and stage/commit them manually.
-
-

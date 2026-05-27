@@ -6,7 +6,7 @@ This is a user-scope skill. It gives doc-producing commands a minimal, sensible 
 
 At the start of any documentation workflow, you **MUST** check if the repository defines its own documentation rules:
 1. Check if the file **`docs/project-docs-structure.md`** exists in the current workspace using your file-viewing or directory-listing tools.
-2. If it **does exist**, immediately read it. Defer to it as the absolute local authority on folder layouts, document naming rules, format templates, and cross-cutting rules. Fully override the global `docs-structure` baseline rules.
+2. If it **does exist**, immediately read it. Defer to it as the absolute local authority on folder layouts, document naming rules, format templates, and cross-cutting rules. Fully override the global `docs-structure` baseline rules. If the file contains a `locale:` frontmatter field and it is not `en`, author all generated document **content** (ADRs, incidents, CONTEXT entries, design docs) in that locale — the embedded templates in the file are already localized; match their language when filling in surrounding prose.
 3. If it **does not exist**, execute the **Bootstrapping Flow** described below.
 
 ---
@@ -36,10 +36,28 @@ If `docs/project-docs-structure.md` is missing, the default documentation baseli
 When `docs/project-docs-structure.md` is missing, follow these steps:
 
 1. **Fast Scan**: Check top-level folders and files (e.g., `docs/`, `doc/`, `README.md`) using your directory-listing or file-viewing tools to detect if any documentation exists. Do NOT run expensive repository-wide scans.
-2. **Existing Docs Found**: If existing documentation files exist, analyze their current folder structure and naming conventions. Propose a customized `docs/project-docs-structure.md` file designed to preserve and standardize their existing style.
-3. **No Docs Found**: If no documentation exists in the repository, advise the user that they can customize the documentation rules for this project by creating `docs/project-docs-structure.md`. Output the following copy-pasteable default configuration to help them bootstrap:
+
+2. **Language prompt**: Ask the developer which primary language they want for their project documentation:
+   - `1. English`
+   - `2. 繁體中文 (zh-tw)`
+   - `3. Other — specify your language`
+
+3. **Write `docs/project-docs-structure.md`**: Write the file to the workspace based on the language choice. This is a working-tree change for the developer to review; do not commit.
+   - **English**: Use the **Default Configuration Payload** below verbatim. Emit `locale: en` frontmatter.
+   - **Any other language**: Translate the Default Configuration Payload (prose and all three format templates) into the requested language at runtime, then write the translated result. Emit `locale: <language-code>` frontmatter (e.g. `locale: zh-tw`). Add a short note at the top of the written file that the locale was translated at bootstrap time and may need review.
+
+4. **Existing Docs Found**: If existing documentation files were found in the Fast Scan, analyze their current folder structure and naming conventions. Propose customizations to the written `docs/project-docs-structure.md` to preserve and standardize their existing style.
+
+---
+
+## Default Configuration Payload
+
+Use this payload verbatim when writing `docs/project-docs-structure.md` for English. For any other language, translate this payload at runtime (prose + all three format templates) before writing.
 
 ```markdown
+---
+locale: en
+---
 # Project Docs Structure
 
 This file is the local authority on how docs are organized in this repository. Use it together with `docs-structure`; when the two conflict, follow this file.
@@ -92,6 +110,145 @@ This file is the local authority on how docs are organized in this repository. U
 5. **Conflict with existing docs.** If new content contradicts an existing ADR, surface the conflict before writing. If confirmed outdated, append a dated correction note — do not rewrite the original.
 6. **Default to \`docs/draft/\`.** When unsure whether a doc should exist, write to \`docs/draft/\` first and ask before graduating to \`docs/\`.
 7. **Human intent before automation.** Ask when the target doc type is unclear.
+8. **Author generated document content in the configured locale.** The embedded format templates are already localized; match their language when filling in surrounding prose.
+
+---
+
+## Format Templates
+
+### ADR Format Template
+
+\`\`\`md
+# {Short title of the decision}
+
+{1–3 sentences: what's the context, what was decided, and why.}
+
+That's it. An ADR can be a single paragraph. The value is in recording *that* a decision was made and *why* — not in filling out every section.
+
+## Optional sections
+
+Only include these when they add genuine value. Most ADRs won't need them.
+
+- **Status** — \`proposed | accepted | deprecated | superseded by YYYYMMDD-hhmm-<slug>\` — useful when decisions are revisited.
+- **Considered options** — only when the rejected alternatives are worth preserving.
+- **Consequences** — only when non-obvious downstream effects need to be called out.
+
+## When to offer an ADR
+
+All three must be true:
+
+1. **Hard to reverse** — the cost of changing your mind later is meaningful.
+2. **Surprising without context** — a future reader will look at the code and wonder "why on earth did they do it this way?"
+3. **The result of a real trade-off** — there were genuine alternatives and you picked one for specific reasons.
+
+If any of the three is missing, skip the ADR.
+
+### What qualifies
+
+- **Architectural shape.** "We're using a monorepo." "The write model is event-sourced."
+- **Integration patterns between components.** "These two services communicate via domain events, not HTTP."
+- **Technology choices that carry lock-in.** Database, message bus, auth provider, deployment target. Not every library — just the ones that would take a quarter to swap out.
+- **Boundary and scope decisions.** "Customer data is owned by the Customer context; other contexts reference it by ID only."
+- **Deliberate deviations from the obvious path.** "We're using manual SQL instead of an ORM because X." Anything where a reasonable reader would assume the opposite.
+- **Constraints not visible in the code.** "We can't use AWS because of compliance requirements." "Response times must be under 200ms because of a partner API contract."
+- **Rejected alternatives when the rejection is non-obvious.** If you considered GraphQL and picked REST for subtle reasons, record it — otherwise someone will suggest GraphQL again in six months.
+
+## Immutability
+
+ADRs are immutable. Do not edit an ADR's original content after it is written. If a decision is revisited:
+
+- Append a dated note to the existing ADR acknowledging the change.
+- Write a new ADR for the new decision.
+- Update the existing ADR's **Status** to \`superseded by YYYYMMDD-hhmm-<new-slug>\`.
+\`\`\`
+
+### Context Format Template (Glossary)
+
+\`\`\`md
+# Context
+
+{One or two sentences: what domain or system this context describes and why the terminology matters here.}
+
+## Language
+
+**Order**:
+A confirmed intent to purchase placed by a Customer.
+_Avoid_: Purchase, transaction
+
+**Invoice**:
+A request for payment sent to a Customer after delivery.
+_Avoid_: Bill, payment request
+
+**Customer**:
+A person or organization that places Orders.
+_Avoid_: Client, buyer, account
+
+## Rules
+
+- **Be opinionated.** When multiple words exist for the same concept, pick one and list the others as aliases to avoid.
+- **Flag conflicts explicitly.** If a term is used ambiguously across the codebase, call it out under a "Flagged ambiguities" subheading with a clear resolution.
+- **Keep definitions tight.** One or two sentences maximum. Define what it *is*, not what it does.
+- **Only include terms specific to this domain.** General programming concepts (timeouts, error types, retry logic) do not belong even if the project uses them heavily. Before adding a term, ask: is this concept unique to this domain, or general? Only the former belongs.
+- **Show relationships.** Express cardinality or ownership where obvious (e.g., "An Order contains one or more LineItems.").
+- **Group by subheadings** when natural clusters emerge. A single flat \`## Language\` section is fine for a cohesive domain.
+
+## Example
+
+Dev: "So when a user clicks 'buy', we create an Order?"
+Expert: "Yes — an Order is confirmed intent to purchase. The Cart becomes an Order at checkout."
+Dev: "And the line items... are those OrderItems?"
+Expert: "LineItems. Items is too vague — it could mean anything."
+Dev: "What about the person buying? User or Customer?"
+Expert: "Customer once they've placed an Order. Before that we don't have a word for them."
+\`\`\`
+
+### Incident Format Template
+
+\`\`\`md
+# {Short title of the incident}
+
+**Occurred:** YYYYMMDD-hhmm
+**Level:** while-dev | while-test | while-production
+
+{1–2 sentence summary of what happened.}
+
+## Symptoms
+
+{What the engineer observed. What looked wrong. What errors or alerts fired.}
+
+## Timeline
+
+{Best-effort sequence of events. Mark uncertain entries with "approx:" and anything the engineer described from memory with "user reported:".}
+
+## Observations
+
+{Facts confirmed during the investigation — things you can point to in logs, code, or output. Keep this separate from conclusions.}
+
+## Conclusion
+
+{Root cause as best understood. If unknown, say so explicitly and list what was ruled out. An honest "root cause unknown — ruled out X and Y" is more useful than a confident wrong answer.}
+
+## Contributing factors
+
+{What made this possible or worse? Only include when non-obvious.}
+
+## What we learned
+
+{Things a future engineer should know when they see similar symptoms. Not action items — those live elsewhere.}
+
+## Related
+
+{Links to related ADRs, design docs, or other incidents. Optional.}
+
+## Immutability
+
+Incident records are immutable. Do not edit the original content after it is written.
+Later corrections or follow-up findings are **appended** at the bottom as a dated section:
+
+### Follow-up (YYYYMMDD-hhmm)
+
+{What was learned, corrected, or resolved after the original entry was written.}
+\`\`\`
 ```
 
 ---
