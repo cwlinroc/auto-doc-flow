@@ -1,4 +1,7 @@
 {
   "name": "review-with-doc",
-  "description": "Review a proposed code change or diff against existing design documentation, ADRs, and guidelines. ACTIVATE this skill when reviewing code changes, pull requests, or verifying if changes align with documentation."
+  "description": "Review a proposed code change or diff against existing design documentation, ADRs, and guidelines. ACTIVATE this skill when reviewing code changes, pull requests, or verifying if changes align with documentation.",
+  "custom_notes": [
+    "When you need to ask a question or clarify details, prefer using the native `ask_question` tool. Frame the question clearly with structured, selectable options, and only fall back to regular text questions if the native tool is not suitable or available."
+  ]
 }

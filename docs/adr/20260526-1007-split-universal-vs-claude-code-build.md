@@ -57,3 +57,7 @@ metadata alongside its own natural edit unit.
   contain agent-specific syntax.
 - **Generate into `claude-code/` root** — no `dist/` subfolder. Rejected: mixes generated
   files with JSON source; no clean boundary for gitignore; tooling confusion.
+
+---
+
+**Correction note — 2026-05-27:** `build.sh` was extended to support an optional `"custom_notes"` string array in each settings JSON. These entries are excluded from the YAML frontmatter (`jq 'del(.custom_notes)'`) and appended to the generated `.md` body as a `## Custom Notes` bulleted list, co-locating agent-specific runtime instructions with the settings JSON without polluting the universal body. See [20260527-1633-packaging-time-agent-custom-notes.md](./20260527-1633-packaging-time-agent-custom-notes.md).

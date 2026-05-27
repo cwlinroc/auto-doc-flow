@@ -1,4 +1,7 @@
 {
   "name": "sync-with-doc",
-  "description": "Mechanically audit and synchronize references, links, files, and terms between code and documentation. ACTIVATE this skill when checking for dead links, verifying glossary terms, or validating doc sync status."
+  "description": "Mechanically audit and synchronize references, links, files, and terms between code and documentation. ACTIVATE this skill when checking for dead links, verifying glossary terms, or validating doc sync status.",
+  "custom_notes": [
+    "When you need to ask a question or clarify details, prefer using the native `ask_question` tool. Frame the question clearly with structured, selectable options, and only fall back to regular text questions if the native tool is not suitable or available."
+  ]
 }

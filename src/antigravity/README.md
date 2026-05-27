@@ -24,7 +24,7 @@ src/antigravity/
 bash src/antigravity/build.sh
 ```
 
-The script compiles each settings JSON under `commands/` and `skills/` with their matching bodies from `src/universal/` and outputs them as skills inside `dist/skills/`.
+The script compiles each settings JSON under `commands/` and `skills/` with their matching bodies from `src/universal/` and outputs them as skills inside `dist/skills/`. An optional `"custom_notes"` array in the settings JSON is stripped from the frontmatter and appended to the body as a `## Custom Notes` section.
 
 ## Installing
 

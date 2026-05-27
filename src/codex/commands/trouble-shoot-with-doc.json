@@ -1,4 +1,7 @@
 {
   "name": "trouble-shoot-with-doc",
-  "description": "Troubleshoot system issues and capture a detailed timeline and root cause in a blameless incident record. Trigger this skill during or after debugging incidents, tracking post-mortems, or investigating production failures."
+  "description": "Troubleshoot system issues and capture a detailed timeline and root cause in a blameless incident record. Trigger this skill during or after debugging incidents, tracking post-mortems, or investigating production failures.",
+  "custom_notes": [
+    "Ask a clarifying question any time symptoms, scope, environment, timeline, conclusion, or user approval to record an incident is ambiguous. Prefer the native `request_user_input` tool when available and when the answer can be represented as discrete choices; fall back to a direct conversational question when the tool is unavailable, not exposed in the current mode, or the answer is open-ended. Keep questions focused and ask one decision at a time."
+  ]
 }

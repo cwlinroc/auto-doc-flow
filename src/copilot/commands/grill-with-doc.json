@@ -1,3 +1,6 @@
 {
-  "description": "Relentlessly interview the engineer about a design decision, challenging terminology and constraints, and capture the outcome in CONTEXT.md, an ADR, or a design doc."
+  "description": "Relentlessly interview the engineer about a design decision, challenging terminology and constraints, and capture the outcome in CONTEXT.md, an ADR, or a design doc.",
+  "custom_notes": [
+    "When clarification is needed, prefer the askQuestions tool instead of only asking in markdown. Prefer select or multi-select questions whenever the response can be represented as a fixed set of options; fall back to plain markdown questions only when that is simpler."
+  ]
 }

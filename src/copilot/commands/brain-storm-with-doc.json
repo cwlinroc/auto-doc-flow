@@ -1,3 +1,6 @@
 {
-  "description": "Brainstorm ideas, early architectural options, and tradeoffs with the engineer, and capture the thoughts in a design doc or draft."
+  "description": "Brainstorm ideas, early architectural options, and tradeoffs with the engineer, and capture the thoughts in a design doc or draft.",
+  "custom_notes": [
+    "When clarification is needed, prefer the askQuestions tool instead of only asking in markdown. Prefer select or multi-select questions whenever the response can be represented as a fixed set of options; fall back to plain markdown questions only when that is simpler."
+  ]
 }

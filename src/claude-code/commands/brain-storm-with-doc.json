@@ -1,3 +1,7 @@
 {
-  "description": "Explore ideas without making code changes. Keeps options and decisions visibly separate. Exports a confirmed direction to a PLAN draft for grill-with-doc."
+  "description": "Explore ideas without making code changes. Keeps options and decisions visibly separate. Exports a confirmed direction to a PLAN draft for grill-with-doc.",
+  "custom_notes": [
+    "Ask the engineer a clarifying question any time intent, scope, or a decision is ambiguous — never proceed on unstated assumptions. Prefer the native `AskUserQuestion` tool whenever the answer maps to a discrete set of selectable options; fall back to a direct conversational question in the interactive terminal REPL (one at a time) for open-ended questions.",
+    "To get the current timestamp, run `date +%Y%m%d-%H%M` via the Bash tool, or `Get-Date -Format 'yyyyMMdd-HHmm'` in PowerShell on Windows."
+  ]
 }

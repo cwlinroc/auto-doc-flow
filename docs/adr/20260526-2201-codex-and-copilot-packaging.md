@@ -102,4 +102,6 @@ existing pattern and was explicitly evaluated in ADR 20260526-1035 (alternative:
 
 ---
 
+**Correction note — 2026-05-27 (custom_notes):** Settings JSON files now support an optional `"custom_notes"` string array alongside `name` and `description`. During the build, these entries are excluded from the compiled YAML frontmatter and appended to the generated body as a `## Custom Notes` bulleted list. See [20260527-1633-packaging-time-agent-custom-notes.md](./20260527-1633-packaging-time-agent-custom-notes.md).
+
 **Correction note — 2026-05-27:** The global `project-docs-structure` skill was deprecated and removed from both Codex CLI and GitHub Copilot packaging. Instead, the agents will dynamically discover project-level rules in `docs/project-docs-structure.md` using the updated, global `docs-structure` skill as a router. See [20260527-1559-transition-project-docs-structure-to-repository-file.md](./20260527-1559-transition-project-docs-structure-to-repository-file.md).

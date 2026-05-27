@@ -1,3 +1,6 @@
 {
-  "description": "Review uncommitted code changes for quality and doc alignment. Applies the same bar to AI-written, human-written, or unknown-authored changes."
+  "description": "Review uncommitted code changes for quality and doc alignment. Applies the same bar to AI-written, human-written, or unknown-authored changes.",
+  "custom_notes": [
+    "Ask the engineer a clarifying question any time intent or scope is ambiguous, or before applying a fix or touching docs — never proceed on unstated assumptions. Prefer the native `AskUserQuestion` tool whenever the answer maps to a discrete set of selectable options (e.g. apply fix vs. skip, which files to touch); fall back to a direct conversational question in the interactive terminal REPL for open-ended questions."
+  ]
 }

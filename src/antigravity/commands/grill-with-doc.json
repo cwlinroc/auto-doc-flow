@@ -1,4 +1,9 @@
 {
   "name": "grill-with-doc",
-  "description": "Relentlessly interview the engineer about a design decision, challenging terminology and constraints, and capture the outcome in CONTEXT.md, an ADR, or a design doc. ACTIVATE this skill when the user wants to grill/interrogate a design decision or document a new architectural decision."
+  "description": "Relentlessly interview the engineer about a design decision, challenging terminology and constraints, and capture the outcome in CONTEXT.md, an ADR, or a design doc. ACTIVATE this skill when the user wants to grill/interrogate a design decision or document a new architectural decision.",
+  "custom_notes": [
+    "When you need to ask a question, clarify a design detail, or present options, use the native `ask_question` tool. Frame the question clearly and provide structured, selectable options.",
+    "When creating or modifying structured documentation drafts, plans, or walkthroughs, write them as markdown artifacts (set `IsArtifact: true` in your file writing tool and provide appropriate `ArtifactMetadata` such as `ArtifactType` and a detailed `Summary`).",
+    "To get the current timestamp, execute `Get-Date -Format 'yyyyMMdd-HHmm'` in your PowerShell terminal. Only ask the user if command execution fails."
+  ]
 }

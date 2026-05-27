@@ -1,3 +1,6 @@
 {
-  "description": "Mechanically sync docs to match uncommitted code changes. Updates moved paths, renamed symbols, and broken links. Flags prose for human review — never rewrites it."
+  "description": "Mechanically sync docs to match uncommitted code changes. Updates moved paths, renamed symbols, and broken links. Flags prose for human review — never rewrites it.",
+  "custom_notes": [
+    "After identifying all flagged files (prose that may need human review), present them to the user using the native `AskUserQuestion` tool with `multiSelect: true` before applying any changes. List each file as a selectable option with a one-line reason. Only apply changes to the files the user selects. If `AskUserQuestion` is unavailable, list the flagged files in text and ask the user to confirm in their next message."
+  ]
 }

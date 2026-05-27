@@ -1,4 +1,7 @@
 {
   "name": "sync-with-doc",
-  "description": "Mechanically audit and synchronize references, links, files, and terms between code and documentation. Trigger this skill when checking for dead links, verifying glossary terms, or validating doc sync status."
+  "description": "Mechanically audit and synchronize references, links, files, and terms between code and documentation. Trigger this skill when checking for dead links, verifying glossary terms, or validating doc sync status.",
+  "custom_notes": [
+    "Ask a clarifying question any time scope, intended doc targets, prose-review ownership, or user approval is ambiguous. Prefer the native `request_user_input` tool when available and when the answer can be represented as discrete choices, especially for selecting flagged files to update or review; fall back to a direct conversational question when the tool is unavailable, not exposed in the current mode, or the answer is open-ended. Keep questions focused and ask one decision at a time."
+  ]
 }

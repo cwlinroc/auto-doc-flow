@@ -10,7 +10,7 @@ DIST="$SCRIPT_DIR/dist"
 # values containing colons, em-dashes, and other YAML-special characters.
 emit_frontmatter() {
   echo "---"
-  jq -r 'to_entries[] | "\(.key): \(.value | @json)"' "$1"
+  jq -r 'del(.custom_notes) | to_entries[] | "\(.key): \(.value | @json)"' "$1"
   echo "---"
 }
 
@@ -33,6 +33,18 @@ for json in "$SCRIPT_DIR/commands"/*.json; do
   fi
   out="$DIST/commands/$name.md"
   { emit_frontmatter "$json"; echo ""; cat "$body"; } > "$out"
+
+  # Append custom notes if present
+  notes=$(jq -r '.custom_notes | select(. != null) | .[] | "- \(.)"' "$json")
+  if [ -n "$notes" ]; then
+    {
+      echo ""
+      echo "## Custom Notes"
+      echo ""
+      echo "$notes"
+    } >> "$out"
+  fi
+
   echo "  commands/$name.md"
 done
 
@@ -47,6 +59,18 @@ for json in "$SCRIPT_DIR/skills"/*.json; do
   mkdir -p "$DIST/skills/$name"
   out="$DIST/skills/$name/SKILL.md"
   { emit_frontmatter "$json"; echo ""; cat "$body"; } > "$out"
+
+  # Append custom notes if present
+  notes=$(jq -r '.custom_notes | select(. != null) | .[] | "- \(.)"' "$json")
+  if [ -n "$notes" ]; then
+    {
+      echo ""
+      echo "## Custom Notes"
+      echo ""
+      echo "$notes"
+    } >> "$out"
+  fi
+
   echo "  skills/$name/SKILL.md"
 
   # Copy sibling helper files (e.g. ADR-FORMAT.md) verbatim

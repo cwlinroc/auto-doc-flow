@@ -1,3 +1,6 @@
 {
-  "description": "Review a proposed code change or diff against existing design documentation, ADRs, and guidelines."
+  "description": "Review a proposed code change or diff against existing design documentation, ADRs, and guidelines.",
+  "custom_notes": [
+    "When clarification is needed, prefer the askQuestions tool instead of only asking in markdown. Prefer select or multi-select questions whenever the response can be represented as a fixed set of options; fall back to plain markdown questions only when that is simpler."
+  ]
 }

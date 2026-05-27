@@ -1,4 +1,8 @@
 {
   "name": "brain-storm-with-doc",
-  "description": "Brainstorm ideas, early architectural options, and tradeoffs with the engineer, and capture the thoughts in a design doc or draft. Trigger this skill when the user wants to brainstorm, explore early ideas, or write draft thoughts/plans."
+  "description": "Brainstorm ideas, early architectural options, and tradeoffs with the engineer, and capture the thoughts in a design doc or draft. Trigger this skill when the user wants to brainstorm, explore early ideas, or write draft thoughts/plans.",
+  "custom_notes": [
+    "Ask a clarifying question any time intent, scope, terminology, or a decision is ambiguous. Prefer the native `request_user_input` tool when available and when the answer can be represented as discrete choices; fall back to a direct conversational question when the tool is unavailable, not exposed in the current mode, or the answer is open-ended. Keep questions focused and ask one decision at a time.",
+    "To get the current timestamp, run `Get-Date -Format \"yyyyMMdd-HHmm\"` in PowerShell or `date +%Y%m%d-%H%M` in bash."
+  ]
 }

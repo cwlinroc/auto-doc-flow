@@ -1,3 +1,7 @@
 {
-  "description": "Interrogate the engineer relentlessly until a design or decision is understood, then capture it in CONTEXT.md, an ADR, or a design doc. Human supplies substance; agent supplies structure."
+  "description": "Interrogate the engineer relentlessly until a design or decision is understood, then capture it in CONTEXT.md, an ADR, or a design doc. Human supplies substance; agent supplies structure.",
+  "custom_notes": [
+    "Ask a clarifying question any time a claim, term, or constraint is ambiguous or unverified — never proceed on unstated assumptions. Keep questions highly focused and ask them one at a time. Prefer the native `AskUserQuestion` tool whenever the answer maps to a discrete set of selectable options; fall back to a direct conversational question in the interactive terminal REPL for open-ended questions.",
+    "To get the current timestamp, run `date +%Y%m%d-%H%M` via the Bash tool, or `Get-Date -Format 'yyyyMMdd-HHmm'` in PowerShell on Windows."
+  ]
 }

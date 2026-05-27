@@ -1,4 +1,7 @@
 {
   "name": "review-with-doc",
-  "description": "Review a proposed code change or diff against existing design documentation, ADRs, and guidelines. Trigger this skill when reviewing code changes, pull requests, or verifying if changes align with documentation."
+  "description": "Review a proposed code change or diff against existing design documentation, ADRs, and guidelines. Trigger this skill when reviewing code changes, pull requests, or verifying if changes align with documentation.",
+  "custom_notes": [
+    "Ask a clarifying question any time intent, scope, required action, or user approval is ambiguous, including before applying a fix or touching docs. Prefer the native `request_user_input` tool when available and when the answer can be represented as discrete choices; fall back to a direct conversational question when the tool is unavailable, not exposed in the current mode, or the answer is open-ended. Keep questions focused and ask one decision at a time."
+  ]
 }

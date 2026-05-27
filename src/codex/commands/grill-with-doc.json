@@ -1,4 +1,8 @@
 {
   "name": "grill-with-doc",
-  "description": "Relentlessly interview the engineer about a design decision, challenging terminology and constraints, and capture the outcome in CONTEXT.md, an ADR, or a design doc. Trigger this skill when the user wants to grill/interrogate a design decision or document a new architectural decision."
+  "description": "Relentlessly interview the engineer about a design decision, challenging terminology and constraints, and capture the outcome in CONTEXT.md, an ADR, or a design doc. Trigger this skill when the user wants to grill/interrogate a design decision or document a new architectural decision.",
+  "custom_notes": [
+    "Ask a clarifying question any time a claim, term, constraint, scope boundary, or required decision is ambiguous or unverified. Prefer the native `request_user_input` tool when available and when the answer can be represented as discrete choices; fall back to a direct conversational question when the tool is unavailable, not exposed in the current mode, or the answer is open-ended. Keep questions focused and ask one decision at a time.",
+    "To get the current timestamp, run `Get-Date -Format \"yyyyMMdd-HHmm\"` in PowerShell or `date +%Y%m%d-%H%M` in bash."
+  ]
 }
