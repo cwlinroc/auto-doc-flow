@@ -20,7 +20,7 @@ If `docs/project-docs-structure.md` is missing, the default documentation baseli
 - `docs/design/` — designs still under exploration: alternatives, tradeoffs, open questions.
 - `docs/reference/` — technical facts, copied sources, and external material worth keeping near the project.
 - `docs/CONTEXT.md` or equivalent — shared terminology and business context. Glossary only.
-- `docs/draft/` — personal scratch for work not yet ready to become team-facing documentation.
+- `docs/draft/` — personal scratch for work not yet ready to become team-facing documentation. Do not link to draft files from other documents, since they are gitignored and cannot be accessed by other developers.
 
 ### When to Use Which Doc (Fallback Only)
 
@@ -86,7 +86,7 @@ This file is the local authority on how docs are organized in this repository. U
 - `docs/domain/` — business context: who uses this system, under what constraints, seasonal patterns, SLAs.
 - `docs/incident/` — blameless incident records. See the Incident Format template below.
 - `docs/reference/` — technical reference material and raw source documents worth keeping near the project. Store verbatim; optionally add a separate summary that cites it.
-- `docs/draft/` — early thoughts, rough plans, personal scratch. Gitignored. Not team-facing.
+- `docs/draft/` — early thoughts, rough plans, personal scratch. Gitignored. Not team-facing. Do not link to draft files from other documents, since they are gitignored and cannot be accessed by other developers.
 
 ## Naming Conventions
 

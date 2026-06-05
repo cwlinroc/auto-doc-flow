@@ -29,7 +29,7 @@ This file is the local authority on how docs are organized in this repository. U
 - `docs/domain/` — business context: who uses this system, under what constraints, seasonal patterns, SLAs.
 - `docs/incident/` — blameless incident records. See the Incident Format template below.
 - `docs/reference/` — technical reference material and raw source documents worth keeping near the project. Store verbatim; optionally add a separate summary that cites it.
-- `docs/draft/` — early thoughts, rough plans, personal scratch. Gitignored. Not team-facing.
+- `docs/draft/` — early thoughts, rough plans, personal scratch. Gitignored. Not team-facing. Do not link to draft files from other documents, since they are gitignored and cannot be accessed by other developers.
 
 ## Naming Conventions
 
