@@ -13,8 +13,7 @@ execute.
    figure out? What constraints matter? What has already been ruled out? One question at a
    time.
 
-2. **Open a scratch file.** Create `docs/draft/Thoughts-<topic>.md` and explore ideas there.
-   Keep the file organized but not formalized — this is space for messy thinking.
+2. **Open a scratch file.** Get the current timestamp (e.g. by running `Get-Date -Format "yyyyMMdd-HHmm"` in PowerShell or `date +%Y%m%d-%H%M` in bash). Create `docs/draft/YYYYMMDD-hhmm-Thoughts-<topic>.md` and explore ideas there. Keep the file organized but not formalized — this is space for messy thinking.
 
 3. **Separate clearly in the draft:**
    - **Options** — things that could be done, each with tradeoffs. Not recommendations.
@@ -28,7 +27,7 @@ execute.
 5. **If an existing doc is relevant**, surface it before going further: *"There's already a
    design doc on X — does what we're exploring build on it or go against it?"*
 
-6. **When a direction is clear and confirmed**, export to `docs/draft/PLAN-<topic>.md` with a
+6. **When a direction is clear and confirmed**, export to `docs/draft/YYYYMMDD-hhmm-PLAN-<topic>.md` (using the same timestamp as the thoughts file, or a new timestamp if appropriate) with a
    structured summary: what was decided, constraints, options considered, and open questions
    resolved.
 

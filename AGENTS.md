@@ -44,7 +44,7 @@ Follow the layout defined in
 | `docs/reference/` | Technical reference and third-party source material (stored verbatim)          |
 | `docs/draft/`     | Gitignored personal scratch; graduate to `docs/` when team-ready               |
 
-Draft file naming: `Thoughts-<topic>.md`, `Problem-<topic>.md`, `PLAN-<topic>.md`.
+Draft file naming: `YYYYMMDD-hhmm-Thoughts-<topic>.md`, `YYYYMMDD-hhmm-Problem-<topic>.md`, `YYYYMMDD-hhmm-PLAN-<topic>.md`.
 
 ## Where to put new customization files
 

@@ -28,7 +28,7 @@ so they stay portable toward the future cross-agent goal.
 
 ```
 brain-storm-with-doc  ─┐
-                       ├──► docs/draft/PLAN-<topic>.md ──► grill-with-doc ──► implement
+                       ├──► docs/draft/YYYYMMDD-hhmm-PLAN-<topic>.md ──► grill-with-doc ──► implement
 trouble-shoot-with-doc ─┘                                                         │
                                                                                   ▼
                                                                review-with-doc / sync-with-doc

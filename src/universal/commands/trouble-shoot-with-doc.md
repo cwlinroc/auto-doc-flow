@@ -8,7 +8,7 @@ This command has two phases. Phase 1 is debugging. Phase 2 — **only when the e
 
 ## Phase 1: Debug
 
-1. **Open a scratch file.** Create `docs/draft/Problem-<topic>.md` at the start of the
+1. **Open a scratch file.** Get the current timestamp (e.g. by running `Get-Date -Format "yyyyMMdd-HHmm"` in PowerShell or `date +%Y%m%d-%H%M` in bash). Create `docs/draft/YYYYMMDD-hhmm-Problem-<topic>.md` at the start of the
    session. Keep observations (what you can see) and conclusions (what you infer) visibly
    separate. Anything the engineer describes from before the session must be marked
    `user reported:` or `per <name>:`.
@@ -26,7 +26,7 @@ This command has two phases. Phase 1 is debugging. Phase 2 — **only when the e
    offer to store it verbatim in `docs/reference/`. Ask before writing.
 
 6. **If a code fix is needed:** do not write code here. Export the findings to
-   `docs/draft/PLAN-<topic>.md` and suggest: *"This needs a code change. Start a new
+   `docs/draft/YYYYMMDD-hhmm-PLAN-<topic>.md` (using the same timestamp as the problem file, or a new timestamp if appropriate) and suggest: *"This needs a code change. Start a new
    `grill-with-doc` session with this plan to implement it."*
 
 ## Phase 2: Record (engineer decides)

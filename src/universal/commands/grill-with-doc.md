@@ -35,7 +35,7 @@ Conduct an intensive grilling session that challenges the proposed plan against 
    - Confirmed, hard-to-reverse decision → ADR in `docs/adr/`.
    - Still exploring alternatives → design doc in `docs/design/`.
    - New term worth preserving → entry in `docs/CONTEXT.md`.
-   - Not sure yet → start in `docs/draft/PLAN-<topic>.md`.
+   - Not sure yet → start in `docs/draft/YYYYMMDD-hhmm-PLAN-<topic>.md`.
 
 5. **Handle conflicts with existing ADRs.** If anything the engineer says contradicts an
    existing ADR, surface it: *"This seems to conflict with the ADR on X. Has that decision

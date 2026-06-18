@@ -94,7 +94,7 @@ This file is the local authority on how docs are organized in this repository. U
 |---|---|---|
 | ADR | \`YYYYMMDD-hhmm-<slug>.md\` | \`20260525-1430-use-postgres-for-write-model.md\` |
 | Incident | \`YYYYMMDD-hhmm-<slug>.md\` | \`20260525-0910-payment-timeout-prod.md\` |
-| Draft | \`Thoughts-<topic>.md\` / \`Problem-<topic>.md\` / \`PLAN-<topic>.md\` | \`PLAN-auth-rework.md\` |
+| Draft | \`YYYYMMDD-hhmm-Thoughts-<topic>.md\` / \`YYYYMMDD-hhmm-Problem-<topic>.md\` / \`YYYYMMDD-hhmm-PLAN-<topic>.md\` | \`20260525-1430-PLAN-auth-rework.md\` |
 | Everything else | lowercase kebab-case | \`checkout-flow.md\` |
 
 **Getting the timestamp:** Run the date-getting shell command yourself first (e.g., \`Get-Date -Format "yyyyMMdd-HHmm"\` in PowerShell or \`date +%Y%m%d-%H%M\` in bash). Only ask the engineer if command execution is unavailable or fails.
