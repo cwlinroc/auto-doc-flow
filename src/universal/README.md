@@ -23,6 +23,7 @@ so they stay portable toward the future cross-agent goal.
 | [`sync-with-doc`](commands/sync-with-doc.md) | Mechanical doc sync against uncommitted changes. Updates paths and symbols; flags prose for human review. |
 | [`trouble-shoot-with-doc`](commands/trouble-shoot-with-doc.md) | Debugging assistant. Separates observations from conclusions. Optionally records a confirmed finding as an immutable incident. |
 | [`brain-storm-with-doc`](commands/brain-storm-with-doc.md) | Explore ideas without code changes. Keeps options and decisions visibly separate. Exports a plan when a direction is confirmed. |
+| [`organize-doc`](commands/organize-doc.md) | Aggressive doc realignment: orientation-scan the project, then archive obsolete design docs, rewrite drifted ones in place, align the CONTEXT.md glossary, and append dated correction notes to drifted ADRs/incidents — all behind a preview-and-confirm plan. |
 
 ## Intended flow
 
@@ -43,6 +44,7 @@ trouble-shoot-with-doc ─┘                                                   
     ├── CONTEXT.md      # glossary only
     ├── adr/            # YYYYMMDD-hhmm-<slug>.md, immutable
     ├── design/         # alternatives, tradeoffs, open questions
+    │   └── archive/    # superseded designs (moved, never deleted)
     ├── domain/         # business context: customers, SLAs, seasonality
     ├── incident/       # YYYYMMDD-hhmm-<slug>.md, immutable
     ├── reference/      # raw source material + technical reference

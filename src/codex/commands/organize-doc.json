@@ -1,0 +1,7 @@
+{
+  "name": "organize-doc",
+  "description": "Aggressively realign project documentation with the current codebase. Runs an orientation scan (README/AGENTS, top-level structure, key modules), then archives obsolete design docs, rewrites drifted design docs in place, safely aligns the CONTEXT.md glossary (formatting + term names; never rewrites definitions), and appends dated correction notes to drifted ADRs/incidents — all behind a preview-and-confirm plan. Never deletes docs, never rewrites immutable records or glossary definitions unprompted, never auto-commits. Trigger this skill when the user wants to clean up, audit, or organize their project documentation.",
+  "custom_notes": [
+    "Ask a clarifying question any time scope, a doc's status, or an archive decision is ambiguous — never proceed on unstated assumptions. Prefer the native `request_user_input` tool when available and when the answer can be represented as discrete choices (e.g., selecting which design docs to archive); fall back to a direct conversational question when the tool is unavailable or the answer is open-ended. Keep questions focused and ask one at a time."
+  ]
+}

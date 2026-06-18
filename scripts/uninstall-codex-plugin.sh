@@ -11,6 +11,7 @@ echo -e "\033[0;36mUninstalling auto-doc-flow skills from Codex CLI...\033[0m"
 ADF_SKILLS=(
   "brain-storm-with-doc"
   "grill-with-doc"
+  "organize-doc"
   "review-with-doc"
   "sync-with-doc"
   "trouble-shoot-with-doc"

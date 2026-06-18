@@ -52,6 +52,7 @@ After install or `--plugin-dir`, commands are available under the `adf:` prefix:
 /adf:review-with-doc
 /adf:sync-with-doc
 /adf:trouble-shoot-with-doc
+/adf:organize-doc
 ```
 
 ## Adding a new command or skill

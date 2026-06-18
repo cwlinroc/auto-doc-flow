@@ -1,0 +1,6 @@
+{
+  "description": "Aggressively realign project documentation with the current codebase. Runs an orientation scan (README/AGENTS, top-level structure, key modules), then archives obsolete design docs, rewrites drifted design docs in place, safely aligns the CONTEXT.md glossary (formatting + term names; never rewrites definitions), and appends dated correction notes to drifted ADRs/incidents — all behind a preview-and-confirm plan. Never deletes docs, never rewrites immutable records or glossary definitions unprompted, never auto-commits.",
+  "custom_notes": [
+    "When clarification is needed — classifying a design doc's status, selecting which docs to archive, or reviewing flagged glossary issues — prefer the askQuestions tool with select or multi-select questions whenever the response can be represented as a fixed set of options; fall back to plain markdown questions only when that is simpler."
+  ]
+}

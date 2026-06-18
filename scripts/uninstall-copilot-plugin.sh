@@ -23,6 +23,7 @@ echo -e "\033[0;36mUninstalling auto-doc-flow from GitHub Copilot...\033[0m"
 ADF_PROMPTS=(
   "brain-storm-with-doc.prompt.md"
   "grill-with-doc.prompt.md"
+  "organize-doc.prompt.md"
   "review-with-doc.prompt.md"
   "sync-with-doc.prompt.md"
   "trouble-shoot-with-doc.prompt.md"

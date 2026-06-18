@@ -14,6 +14,7 @@ This file is the local authority on how docs are organized in this repository. U
     ├── CONTEXT.md      # glossary ONLY — shared terminology, no implementation detail
     ├── adr/            # Architecture Decision Records
     ├── design/         # designs under exploration
+    │   └── archive/    # superseded designs, moved here on confirmation (never deleted)
     ├── domain/         # business context: customers, SLAs, seasonality, domain rules
     ├── incident/       # blameless incident records
     ├── reference/      # technical reference + raw source material
@@ -25,7 +26,10 @@ This file is the local authority on how docs are organized in this repository. U
 - `README.md` — entry point and quick orientation.
 - `docs/CONTEXT.md` — glossary and shared terminology, nothing else. No implementation detail, no specs, no scratch notes. See the Context Format template below.
 - `docs/adr/` — decisions that are hard to reverse or hard to understand without context. See the ADR Format template below.
-- `docs/design/` — designs and tradeoffs still being worked through.
+- `docs/design/` — designs and tradeoffs still being worked through. Each file may carry a
+  `status: active | in-progress | superseded` frontmatter field. When a design is confirmed superseded,
+  move it to `docs/design/archive/` (never delete, never move to `reference/`). Create the
+  `archive/` subfolder lazily — only when the first file is moved there.
 - `docs/domain/` — business context: who uses this system, under what constraints, seasonal patterns, SLAs.
 - `docs/incident/` — blameless incident records. See the Incident Format template below.
 - `docs/reference/` — technical reference material and raw source documents worth keeping near the project. Store verbatim; optionally add a separate summary that cites it.

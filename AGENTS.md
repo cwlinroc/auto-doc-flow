@@ -1,6 +1,6 @@
 # Auto Doc Flow — Agent Instructions
 
-This project builds VS Code agent skills and custom commands that generate structured documentation.
+This project builds reusable agent skills and custom commands for structured documentation workflows across multiple agent platforms.
 
 ## Project goal
 
@@ -54,6 +54,9 @@ Draft file naming: `YYYYMMDD-hhmm-Thoughts-<topic>.md`, `YYYYMMDD-hhmm-Problem-<
 | -------- | ---------------------------------------------- |
 | Skills   | `src/universal/skills/<name>/SKILL.md`         |
 | Commands | `src/universal/commands/<name>.md`             |
+
+> [!IMPORTANT]
+> If the requirement is to change the documentation structure skill definition of this project, you must update the universal skill template at [src/universal/skills/docs-structure/SKILL.md](src/universal/skills/docs-structure/SKILL.md) instead of just editing the local authority rules at [docs/project-docs-structure.md](docs/project-docs-structure.md). Editing only the local authority file will not update the installed skill template in the packaged agent plugins.
 
 **Claude Code settings (metadata + plugin packaging):**
 
